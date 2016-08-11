@@ -27,7 +27,10 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>The calculation of gradients and other forms of derivatives is a core part of machine learning, computer vision, and physical simulation. But the manual creation of derivatives is prone to error and requires a high "mental overhead" for practitioners in these fields. However, the process of taking derivatives is actually the highly mechanical application of the chain rule and can be computed using formal techniques such as automatic or symbolic differentiation. A family of "autodiff" approaches exist, each with their own particular strengths and trade-offs.</p>
+        <h2>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+
+<p>The calculation of gradients and other forms of derivatives is a core part of machine learning, computer vision, and physical simulation. But the manual creation of derivatives is prone to error and requires a high "mental overhead" for practitioners in these fields. However, the process of taking derivatives is actually the highly mechanical application of the chain rule and can be computed using formal techniques such as automatic or symbolic differentiation. A family of "autodiff" approaches exist, each with their own particular strengths and trade-offs.</p>
 
 <p>In the ideal case, automatically generated derivatives should be competitive with manually generated ones and run at near-peak performance on modern hardware, but the most expressive systems for autodiff which can handle arbitrary, Turing-complete programs, are unsuited for performance-critical applications, such as large-scale machine learning or physical simulation. Alternatively, the most performant systems are not designed for use outside of their designated application space, e.g. graphics or neural networks.</p>
 
@@ -39,6 +42,126 @@
 <li>What are the challenges in elevating an expressive autodiff implementation from just a “prototyping language” to one used directly in performance-critical industrial settings?</li>
 <li>A shared representation of programs like LLVM IR has transformed programming language and compiler research. Is there any benefit to a common representation of differentiable programs that would enable shared tooling amongst autodiff libraries and implementations?</li>
 </ul>
+
+<h2>
+<a id="tentative-schedule" class="anchor" href="#tentative-schedule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tentative schedule</h2>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00-9:10 AM</td>
+<td>Introduction and opening remarks</td>
+</tr>
+<tr>
+<td>9:10-9:40 AM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>9:40-9:50 AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>9:50-10:20 AM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>10:20-10:30AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>10:30-11:00AM</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td>11:00-11:30AM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>11:30-11:40AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>11:40- 2:30PM</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>2:30-3:00PM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>3:00-3:10PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>3:10-3:40PM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>3:40-3:50PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>3:50-4:30PM</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td>4:30-5:00PM</td>
+<td>Invited talk</td>
+</tr>
+<tr>
+<td>5:00-5:10PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>5:10-6:10PM</td>
+<td>Panel</td>
+</tr>
+<tr>
+<td>6:10PM</td>
+<td>End</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="about-the-speakers" class="anchor" href="#about-the-speakers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About the speakers</h2>
+
+<ul>
+<li>Matthew Johnson, Harvard -- author of Python autograd</li>
+<li>David Duvenaud -- inventors of Python autograd, did pretty nutty stuff with it, e.g. hypergrad, molecular optimization</li>
+<li>Yoshua Bengio, MILA, Université de Montréal -- </li>
+<li>Barak Pearlmutter, author of "Automatic Differentiation of Algorithms for Machine Learning", does active research in AD.</li>
+<li>Jeff Siskind, active researcher in AD in the field of ML.</li>
+<li>Jeff Dean, Google Brain -- He might be the perfect person to talk about TensorFlow, highlighting high-level decisions w.r.t. Autodiff</li>
+<li>Brian Guenter - author of D* symbolic differentiation algorithm, built systems exploiting automatic derivative calculation in machine learning and graphics.</li>
+</ul>
+
+<h2>
+<a id="about-us" class="anchor" href="#about-us" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About us</h2>
+
+<p>Alex Wiltschko (<a href="https://github.com/alexbw" class="user-mention">@alexbw</a>)</p>
+
+<p>Zach DeVito (<a href="https://github.com/zdevito" class="user-mention">@zdevito</a>) is a Postdoc at Stanford. His work applies techniques from programming languages and compilers to make high-performance programming easier and useable by a wider audience. He has worked on domain-specific languages for physical simulation, statistics, and image processing. In addition, he created the Terra meta-programming language that makes building high performance domain-specific languages easier.</p>
+
+<p>Frédéric Bastien (<a href="https://github.com/nouiz" class="user-mention">@nouiz</a>) is team lead - software infrastructure at the Montreal Institute of Learning Algorithms, Canada (MILA) and lead developer for the Theano library. In 2007, he finished an M.S. in computer architectures at University of Montreal and has since worked at MILA (formerly LISA lab).</p>
+
+<p>Pascal Lamblin (<a href="https://github.com/lamblin" class="user-mention">@lamblin</a>) is a software analyst at MILA (Montreal Institute for Learning Algorithms). After completing an engineering degree at École Centrale Paris, he has done some research under the supervision of Yoshua Bengio at Université de Montréal, and is now working on the development of Theano.</p>
+
+<p>This workshop generally stems from prior workshops on tooling in machine learning, such as:</p>
+
+<ul>
+<li>The Big Learning workshops from 2011-12-13, <a href="http://biglearn.org/">http://biglearn.org/</a>
+</li>
+<li>Its successor Machine Learning Systems (<a href="http://learningsys.org/">http://learningsys.org/</a>) 2015</li>
+</ul>
+
+<p>However, our focus shifts from specific infrastructural and engineering challenges towards the most enabling programming abstractions in machine learning.</p>
       </section>
     </div>
 
