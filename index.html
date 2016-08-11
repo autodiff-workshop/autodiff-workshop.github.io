@@ -1,1 +1,55 @@
-<h1>The future of gradient-based machine learning software</h1>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Autodiff Workshop : Workshop on the future of gradient-based machine learning software, NIPS 2016">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Autodiff Workshop</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/autodiff-workshop">View on GitHub</a>
+
+          <h1 id="project_title">Autodiff Workshop</h1>
+          <h2 id="project_tagline">Workshop on the future of gradient-based machine learning software, NIPS 2016</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>The calculation of gradients and other forms of derivatives is a core part of machine learning, computer vision, and physical simulation. But the manual creation of derivatives is prone to error and requires a high "mental overhead" for practitioners in these fields. However, the process of taking derivatives is actually the highly mechanical application of the chain rule and can be computed using formal techniques such as automatic or symbolic differentiation. A family of "autodiff" approaches exist, each with their own particular strengths and trade-offs.</p>
+
+<p>In the ideal case, automatically generated derivatives should be competitive with manually generated ones and run at near-peak performance on modern hardware, but the most expressive systems for autodiff which can handle arbitrary, Turing-complete programs, are unsuited for performance-critical applications, such as large-scale machine learning or physical simulation. Alternatively, the most performant systems are not designed for use outside of their designated application space, e.g. graphics or neural networks.</p>
+
+<p>This workshop will bring together developers and researchers of state-of-the-art solutions to generating derivatives automatically and discuss ways in which these solutions can be evolved to be both more expressive and achieve higher performance. Topics for discussion will include: </p>
+
+<ul>
+<li>Whether it is feasible to create a single differentiable programming language, or if we will always have separate solutions for different fields such as vision and ML. </li>
+<li>What are the primitive data types of a differentiable language? N-dimensional arrays are useful for many machine learning applications, but other domains make use of graph types and sparse matrices.</li>
+<li>What are the challenges in elevating an expressive autodiff implementation from just a “prototyping language” to one used directly in performance-critical industrial settings?</li>
+<li>A shared representation of programs like LLVM IR has transformed programming language and compiler research. Is there any benefit to a common representation of differentiable programs that would enable shared tooling amongst autodiff libraries and implementations?</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
