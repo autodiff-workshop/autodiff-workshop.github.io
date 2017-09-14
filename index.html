@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Autodiff Workshop : Workshop on the future of gradient-based machine learning software, NIPS 2016">
+    <meta name="description" content="Autodiff Workshop : The future of gradient-based machine learning software and techniques, NIPS 2017">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/autodiff-workshop">View on GitHub</a>
 
           <h1 id="project_title">Autodiff Workshop</h1>
-          <h2 id="project_tagline">Workshop on the future of gradient-based machine learning software, NIPS 2016</h2>
+          <h2 id="project_tagline">The future of gradient-based machine learning software and techniques, NIPS 2017</h2>
 
         </header>
     </div>
@@ -29,22 +29,60 @@
       <section id="main_content" class="inner">
         <h2>
 <a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+        <p>Many algorithms in machine learning, computer vision, physical simulation, and other fields require the calculation of gradients and other derivatives. Manual derivation of gradients can be time consuming and error-prone. Automatic differentiation comprises a set of techniques to calculate the derivative of a numerical computation expressed as a computer program. These techniques are commonly used in atmospheric sciences and computational fluid dynamics, and have more recently also been adopted by machine learning researchers.</p>
 
-<p>The calculation of gradients and other forms of derivatives is a core part of machine learning, computer vision, and physical simulation. But the manual creation of derivatives is prone to error and requires a high "mental overhead" for practitioners in these fields. However, the process of taking derivatives is actually the highly mechanical application of the chain rule and can be computed using formal techniques such as automatic or symbolic differentiation. A family of "autodiff" approaches exist, each with their own particular strengths and trade-offs.</p>
+        <p>Practitioners across many fields have built a wide set of automatic differentiation tools, using different programming languages, computational primitives and intermediate compiler representations. Each of these choices comes with positive and negative trade-offs, in terms of their usability, flexibility and performance in specific domains.</p>
 
-<p>In the ideal case, automatically generated derivatives should be competitive with manually generated ones and run at near-peak performance on modern hardware, but the most expressive systems for autodiff which can handle arbitrary, Turing-complete programs, are unsuited for performance-critical applications, such as large-scale machine learning or physical simulation. Alternatively, the most performant systems are not designed for use outside of their designated application space, e.g. graphics or neural networks.</p>
-
-<p>This workshop will bring together developers and researchers of state-of-the-art solutions to generating derivatives automatically and discuss ways in which these solutions can be evolved to be both more expressive and achieve higher performance. Topics for discussion will include: </p>
+        <p>This workshop will bring together researchers in the fields of automatic differentiation and machine learning to discuss ways in which advanced automatic differentiation frameworks and techniques can enable more advanced machine learning models, run large-scale machine learning on accelerators with better performance, and increase the usability of machine learning frameworks for practitioners. Topics for discussion will include:</p>
 
 <ul>
-<li>Whether it is feasible to create a single differentiable programming language, or if we will always have separate solutions for different fields such as vision and ML. </li>
-<li>What are the primitive data types of a differentiable language? N-dimensional arrays are useful for many machine learning applications, but other domains make use of graph types and sparse matrices.</li>
-<li>What are the challenges in elevating an expressive autodiff implementation from just a “prototyping language” to one used directly in performance-critical industrial settings?</li>
-<li>A shared representation of programs like LLVM IR has transformed programming language and compiler research. Is there any benefit to a common representation of differentiable programs that would enable shared tooling amongst autodiff libraries and implementations?</li>
+<li>What abstractions (languages, kernels, interfaces, instruction sets) do we need to develop advanced automatic differentiation frameworks for the machine learning ecosystem?</li>
+<li>What different use cases exist in machine learning, from large-scale performance-critical models to small prototypes, and how should our toolsets reflect these needs?</li>
+<li>What advanced techniques from the automatic differentiation literature, such as checkpointing, differentiating through iterative processes or chaotic systems, cross-country elimination, etc., could be adopted by the ML community to enable research on new models?</li>
+<li>How can we foster greater collaboration between the fields of machine learning and automatic differentiation?</li>
 </ul>
+
+
+<h2>
+<a id="call-for-submissions" class="anchor" href="#call-for-submissions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Call for submissions</h2>
+
+<p>We are soliciting contributions demonstrating work that helps or could help bridging the gap between the AD community and the developers and users of ML software.</p>
+
+<p>Submissions can be:
+<ul>
+    <li>preliminary or novel work demonstrating applications of AD techniques to ML;</li>
+    <li>recent work on AD and ML published in non-ML venues;</li>
+    <li>a summary of multiple previous contributions on AD techniques with potential applications for ML software.</li>
+</ul>
+</p>
+
+<p>Submissions should consist in 2 to 4 pages extended abstracts in NIPS format, they do not need to be anonymized.
+The procedure for submissions will be announced soon.
+</p>
+
+<p>Up to 4 submissions will be selected as contributed 40-minute talks. Depending on the number of quality submissions, some will be selected as posters.</p>
+
+<p>
+Abstracts will be accessible from this website, but no proceedings will be published, the workshop is considered non-archival.</p>
+
+<h3>
+<a id="important-dates" class="anchor" href="#important-dates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important dates</h3>
+<ul>
+    <li>September 17th: opening of submissions</li>
+    <li>October 7th: closing of submissions</li>
+    <li>October 27th: announcement of acceptance</li>
+</ul>
+
 
 <h2>
 <a id="tentative-schedule" class="anchor" href="#tentative-schedule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tentative schedule</h2>
+
+<p>The workshop will take place on Saturday, December 9<sup>th</sup>, 2017.</p>
+
+<p>
+We have two invited keynote speakers, and plan to offer four other speaking slots to workshop submissions.
+The day will conclude with a panel discussion, with questions to be focused on how the automatic differentiation and machine learning fields can collaborate and cross-pollinate each other with ideas and research problems.
+</p>
 
 <table>
 <thead>
@@ -55,75 +93,51 @@
 </thead>
 <tbody>
 <tr>
-<td>9:00-9:10 AM</td>
+<td>(15 mins)</td>
 <td>Introduction and opening remarks</td>
 </tr>
 <tr>
-<td><strong>9:10-9:40 AM</strong></td>
-<td><strong><a href="slides/BarakPearlmutter.pdf">Barak A. Pearlmutter – Automatic Differentiation: History and Headroom</a></strong></td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Atılım Güneş Baydin – Beyond backprop: automatic differentiation in machine learning</strong></td>
 </tr>
 <tr>
-<td>9:40-9:50 AM</td>
-<td>Discussion</td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Speaker selected from workshop submissions</strong></td>
 </tr>
 <tr>
-<td><strong>9:50-10:20 AM</strong></td>
-<td><strong><a href="slides/JeffDean.pdf">Jeff Dean – TensorFlow: Future Directions for Simplifying Large-Scale Machine Learning</a></strong></td>
-</tr>
-<tr>
-<td>10:20-10:30AM</td>
-<td>Discussion</td>
-</tr>
-<tr>
-<td>10:30-11:00AM</td>
+<td>(30 mins)</td>
 <td>Coffee break</td>
 </tr>
 <tr>
-<td><strong>11:00-11:30AM</strong></td>
-<td><strong><a href="slides/DavidDuvenaud.pdf">David Duvenaud – No more mini-languages: The power of autodiffing full-featured Python</a></strong></td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Speaker selected from workshop submissions</strong></td>
 </tr>
 <tr>
-<td>11:30-11:40AM</td>
-<td>Discussion</td>
+<td>(2 h 30 mins)</td>
+<td>Poster session and lunch break</td>
 </tr>
 <tr>
-<td>11:40AM-2:30PM</td>
-<td>Lunch break</td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Jean Utke – 30 years of work on automatic differentiation: advanced autodiff techniques</strong></td>
 </tr>
 <tr>
-<td><strong>2:30-3:00PM</strong></td>
-<td><strong><a href="slides/YoshuaBengio-NIPSAutoDiffWorkshop10dec2016.key.pdf">Yoshua Bengio – Credit assignment: beyond backpropagation</a></strong></td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Speaker selected from workshop submissions</strong></td>
 </tr>
 <tr>
-<td>3:00-3:10PM</td>
-<td>Discussion</td>
-</tr>
-<tr>
-<td><strong>3:10-3:40PM</strong></td>
-<td><strong><a href="slides/MatthewJohnson.pdf">Matthew Johnson – Autodiff writes your exponential family inference code</a></strong></td>
-</tr>
-<tr>
-<td>3:40-3:50PM</td>
-<td>Discussion</td>
-</tr>
-<tr>
-<td>3:50-4:30PM</td>
+<td>(30 mins)</td>
 <td>Coffee break</td>
 </tr>
 <tr>
-<td><strong>4:30-5:00PM</strong></td>
-<td><strong><a href="slides/JeffreyMarkSiskind.pdf">Jeffrey M. Siskind – The tension between convenience and performance in automatic differentiation</a></strong></td>
+<td><strong>(40 mins)</strong></td>
+<td><strong>Speaker selected from workshop submissions</strong></td>
 </tr>
 <tr>
-<td>5:00-5:10PM</td>
-<td>Discussion</td>
+<td><strong>(60 mins)</strong></td>
+<td><strong>Panel discussion with speakers</strong></td>
 </tr>
 <tr>
-<td><strong>5:10-6:10PM</strong></td>
-<td><strong>Panel discussion</strong></td>
-</tr>
-<tr>
-<td>6:10PM</td>
+<td>(then)</td>
 <td>End</td>
 </tr>
 </tbody>
@@ -132,27 +146,22 @@
 <h2>
 <a id="about-the-speakers" class="anchor" href="#about-the-speakers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About the speakers</h2>
 
-<ul>
-<li>Matthew Johnson, Google Brain</li>
-<li>David Duvenaud, University of Toronto</li>
-<li>Yoshua Bengio, MILA, Université de Montréal</li>
-<li>Barak A. Pearlmutter, Maynooth University</li>
-<li>Jeff Dean, Google Brain</li>
-<li>Jeffrey M. Siskind, Purdue University</li>
-</ul>
+TBD
 
 <h2>
 <a id="about-us" class="anchor" href="#about-us" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About us</h2>
 
-<p>Alex Wiltschko (<a href="https://github.com/alexbw" class="user-mention">@alexbw</a>) is formerly a research engineer at Twitter, and a core developer of Torch Autograd, an automatic differentiation library used for both research and production at Twitter. Previously, he completed his PhD in Neurobiology at Harvard, focusing on quantifying behavior and body language using depth cameras and nonparametric time-series modeling.</p>
+<p>Alex Wiltschko (<a href="https://github.com/alexbw" class="user-mention">@alexbw</a>) is a research scientist at Google Brain, focusing on building more flexible machine learning software systems, and also applications of machine learning to biology. Previously, he was a core developer of torch-autograd, an automatic differentiation library used for both research and production at Twitter. He completed his PhD in Neurobiology at Harvard, focusing on quantifying behavior and body language using depth cameras and nonparametric time-series modeling.
+</p>
 
-<p>Zach DeVito (<a href="https://github.com/zdevito" class="user-mention">@zdevito</a>) is a Postdoc at Stanford. His work applies techniques from programming languages and compilers to make high-performance programming easier and useable by a wider audience. He has worked on domain-specific languages for physical simulation, statistics, and image processing. In addition, he created the Terra meta-programming language that makes building high performance domain-specific languages easier.</p>
 
-<p>Frédéric Bastien (<a href="https://github.com/nouiz" class="user-mention">@nouiz</a>) is team lead - software infrastructure at the Montreal Institute of Learning Algorithms, Canada (MILA) and lead developer for the Theano library. In 2007, he finished an M.S. in computer architectures at University of Montreal and has since worked at MILA (formerly LISA lab).</p>
+<p>Bart van Merriënboer (<a href="https://github.com/bartvm" class="user-mention">@bartvm</a>)
+is a PhD student at MILA (the Montreal Institute for Learning Algorithms) under the supervision of Yoshua Bengio. His work focuses on the application of deep learning to natural language processing and the development of machine learning tools and frameworks. He previously interned at Google Brain, Facebook AI Research, and Twitter, and contributed to Theano, Torch, torch-autograd, and Blocks/Fuel.
+</p>
 
-<p>Pascal Lamblin (<a href="https://github.com/lamblin" class="user-mention">@lamblin</a>) is a software analyst at MILA (Montreal Institute for Learning Algorithms). After completing an engineering degree at École Centrale Paris, he has done some research under the supervision of Yoshua Bengio at Université de Montréal, and is now working on the development of Theano.</p>
+<p>Pascal Lamblin (<a href="https://github.com/lamblin" class="user-mention">@lamblin</a>) is a software analyst at MILA. After completing an engineering degree at École Centrale Paris, he has done some research under the supervision of Yoshua Bengio at Université de Montréal, and is now working on the development of Theano.</p>
 
-<p>This workshop generally stems from prior workshops on tooling in machine learning, such as:</p>
+<p>This workshop follows up on <a href="2016.html">last year's Autodiff workshop</a>. They more generally stem from prior workshops on tooling in machine learning, such as:</p>
 
 <ul>
 <li>The Big Learning workshops from 2011-12-13, <a href="http://biglearn.org/">http://biglearn.org/</a>

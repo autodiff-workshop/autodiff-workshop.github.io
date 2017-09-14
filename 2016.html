@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Autodiff Workshop : Workshop on the future of gradient-based machine learning software, NIPS 2016">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Autodiff Workshop</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/autodiff-workshop">View on GitHub</a>
+
+          <h1 id="project_title">Autodiff Workshop</h1>
+          <h2 id="project_tagline">Workshop on the future of gradient-based machine learning software, NIPS 2016</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+
+<p>The calculation of gradients and other forms of derivatives is a core part of machine learning, computer vision, and physical simulation. But the manual creation of derivatives is prone to error and requires a high "mental overhead" for practitioners in these fields. However, the process of taking derivatives is actually the highly mechanical application of the chain rule and can be computed using formal techniques such as automatic or symbolic differentiation. A family of "autodiff" approaches exist, each with their own particular strengths and trade-offs.</p>
+
+<p>In the ideal case, automatically generated derivatives should be competitive with manually generated ones and run at near-peak performance on modern hardware, but the most expressive systems for autodiff which can handle arbitrary, Turing-complete programs, are unsuited for performance-critical applications, such as large-scale machine learning or physical simulation. Alternatively, the most performant systems are not designed for use outside of their designated application space, e.g. graphics or neural networks.</p>
+
+<p>This workshop will bring together developers and researchers of state-of-the-art solutions to generating derivatives automatically and discuss ways in which these solutions can be evolved to be both more expressive and achieve higher performance. Topics for discussion will include: </p>
+
+<ul>
+<li>Whether it is feasible to create a single differentiable programming language, or if we will always have separate solutions for different fields such as vision and ML. </li>
+<li>What are the primitive data types of a differentiable language? N-dimensional arrays are useful for many machine learning applications, but other domains make use of graph types and sparse matrices.</li>
+<li>What are the challenges in elevating an expressive autodiff implementation from just a “prototyping language” to one used directly in performance-critical industrial settings?</li>
+<li>A shared representation of programs like LLVM IR has transformed programming language and compiler research. Is there any benefit to a common representation of differentiable programs that would enable shared tooling amongst autodiff libraries and implementations?</li>
+</ul>
+
+<h2>
+<a id="schedule" class="anchor" href="#schedule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Schedule</h2>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00-9:10 AM</td>
+<td>Introduction and opening remarks</td>
+</tr>
+<tr>
+<td><strong>9:10-9:40 AM</strong></td>
+<td><strong><a href="slides/BarakPearlmutter.pdf">Barak A. Pearlmutter – Automatic Differentiation: History and Headroom</a></strong></td>
+</tr>
+<tr>
+<td>9:40-9:50 AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td><strong>9:50-10:20 AM</strong></td>
+<td><strong><a href="slides/JeffDean.pdf">Jeff Dean – TensorFlow: Future Directions for Simplifying Large-Scale Machine Learning</a></strong></td>
+</tr>
+<tr>
+<td>10:20-10:30AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>10:30-11:00AM</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td><strong>11:00-11:30AM</strong></td>
+<td><strong><a href="slides/DavidDuvenaud.pdf">David Duvenaud – No more mini-languages: The power of autodiffing full-featured Python</a></strong></td>
+</tr>
+<tr>
+<td>11:30-11:40AM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>11:40AM-2:30PM</td>
+<td>Lunch break</td>
+</tr>
+<tr>
+<td><strong>2:30-3:00PM</strong></td>
+<td><strong><a href="slides/YoshuaBengio-NIPSAutoDiffWorkshop10dec2016.key.pdf">Yoshua Bengio – Credit assignment: beyond backpropagation</a></strong></td>
+</tr>
+<tr>
+<td>3:00-3:10PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td><strong>3:10-3:40PM</strong></td>
+<td><strong><a href="slides/MatthewJohnson.pdf">Matthew Johnson – Autodiff writes your exponential family inference code</a></strong></td>
+</tr>
+<tr>
+<td>3:40-3:50PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td>3:50-4:30PM</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td><strong>4:30-5:00PM</strong></td>
+<td><strong><a href="slides/JeffreyMarkSiskind.pdf">Jeffrey M. Siskind – The tension between convenience and performance in automatic differentiation</a></strong></td>
+</tr>
+<tr>
+<td>5:00-5:10PM</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td><strong>5:10-6:10PM</strong></td>
+<td><strong>Panel discussion</strong></td>
+</tr>
+<tr>
+<td>6:10PM</td>
+<td>End</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="about-the-speakers" class="anchor" href="#about-the-speakers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About the speakers</h2>
+
+<ul>
+<li>Matthew Johnson, Google Brain</li>
+<li>David Duvenaud, University of Toronto</li>
+<li>Yoshua Bengio, MILA, Université de Montréal</li>
+<li>Barak A. Pearlmutter, Maynooth University</li>
+<li>Jeff Dean, Google Brain</li>
+<li>Jeffrey M. Siskind, Purdue University</li>
+</ul>
+
+<h2>
+<a id="about-us" class="anchor" href="#about-us" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About us</h2>
+
+<p>Alex Wiltschko (<a href="https://github.com/alexbw" class="user-mention">@alexbw</a>) is formerly a research engineer at Twitter, and a core developer of Torch Autograd, an automatic differentiation library used for both research and production at Twitter. Previously, he completed his PhD in Neurobiology at Harvard, focusing on quantifying behavior and body language using depth cameras and nonparametric time-series modeling.</p>
+
+<p>Zach DeVito (<a href="https://github.com/zdevito" class="user-mention">@zdevito</a>) is a Postdoc at Stanford. His work applies techniques from programming languages and compilers to make high-performance programming easier and useable by a wider audience. He has worked on domain-specific languages for physical simulation, statistics, and image processing. In addition, he created the Terra meta-programming language that makes building high performance domain-specific languages easier.</p>
+
+<p>Frédéric Bastien (<a href="https://github.com/nouiz" class="user-mention">@nouiz</a>) is team lead - software infrastructure at the Montreal Institute of Learning Algorithms, Canada (MILA) and lead developer for the Theano library. In 2007, he finished an M.S. in computer architectures at University of Montreal and has since worked at MILA (formerly LISA lab).</p>
+
+<p>Pascal Lamblin (<a href="https://github.com/lamblin" class="user-mention">@lamblin</a>) is a software analyst at MILA (Montreal Institute for Learning Algorithms). After completing an engineering degree at École Centrale Paris, he has done some research under the supervision of Yoshua Bengio at Université de Montréal, and is now working on the development of Theano.</p>
+
+<p>This workshop generally stems from prior workshops on tooling in machine learning, such as:</p>
+
+<ul>
+<li>The Big Learning workshops from 2011-12-13, <a href="http://biglearn.org/">http://biglearn.org/</a>
+</li>
+<li>Its successor Machine Learning Systems (<a href="http://learningsys.org/">http://learningsys.org/</a>) 2015</li>
+</ul>
+
+<p>However, our focus shifts from specific infrastructural and engineering challenges towards the most enabling programming abstractions in machine learning.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
